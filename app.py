@@ -36,9 +36,10 @@ prompt_template = lp.PromptTemplate(
 
 
 def get_gemini_response(input_prompt):
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-pro')
     response = model.generate_content(input_prompt)
     return response.text
+
 
 def input_pdf_text(uploaded_file):
     reader = pdf.PdfReader(uploaded_file)
